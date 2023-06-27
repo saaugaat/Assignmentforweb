@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop</title>
+  <style>
+    .item {
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+    .selected-image img {
+      width: 500px;
+      height: 500px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="item" onclick="selectImage('messi.jpg')">
+    <img src="messi.jpg" alt="Messi">
+  </div>
+  <div class="item" onclick="selectImage('ronaldo.jpg')">
+    <img src="ronaldo.jpg" alt="Ronaldo">
+  </div>
+  <div class="item" onclick="selectImage('ronald.jpeg')">
+    <img src="ronald.jpeg" alt="Halland">
+  </div>
+  <div class="item" onclick="selectImage('neymar.jpg')">
+    <img src="neymar.jpg" alt="Neymar">
+  </div>
+  <div class="item" onclick="selectImage('mbappe.jpg')">
+    <img src="halland.jpg" alt="Halland">
+  </div>
+
+  <div id="selectedImage" class="selected-image">
+    <!-- The selected image will be displayed here -->
+  </div>
+
+  <script>
+    var selectedImageContainer = document.getElementById("selectedImage");
+
+    function selectImage(imageUrl) {
+      selectedImageContainer.innerHTML = `<img src="${imageUrl}" alt="Selected Image">`;
+    }
+  </script>
+</body>
+</html>
